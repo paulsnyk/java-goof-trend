@@ -1,4 +1,4 @@
-name: Build,Push Image CI
+name: Build,Push, Run Application CI
 
 on:
   push:
@@ -84,7 +84,7 @@ jobs:
           # DSSC_RESULTS_FILE: /results.json
           # DSSC_FINDINGS_THRESHOLD: '{"malware": 100, "vulnerabilities": { "defcon1": 100, "critical": 100, "high": 100 }, "contents": { "defcon1": 100, "critical": 100, "high": 100 }, "checklists": { "defcon1": 100, "critical": 100, "high": 100 }}'
   redeploy:
-      name: Redeploy webhook call
+      name: Redeploy Application
       runs-on: ubuntu-18.04
       needs: [image-test]
       steps:
